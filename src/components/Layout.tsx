@@ -3,40 +3,21 @@ import { ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
-  direction: "right" | "left";
 };
 
-const variantsLeft = {
+const variants = {
   hidden: { opacity: 0, x: -300, y: 0 },
   enter: { opacity: 1, x: 0, y: 0 },
 };
-const variantsRight = {
-  hidden: { opacity: 0, x: 300, y: 0 },
-  enter: { opacity: 1, x: 0, y: 0 },
-};
 
-function Layout({ children, direction }: Props) {
-  if (direction === "right") {
-    return (
-      <div>
-        <motion.div
-          initial="hidden"
-          animate="enter"
-          variants={variantsRight}
-          transition={{ type: "easeInOut", duration: 0.5 }}
-        >
-          {children}
-        </motion.div>
-      </div>
-    );
-  }
+function Layout({ children }: Props) {
   return (
     <div>
       <motion.div
         initial="hidden"
         animate="enter"
         exit="exit"
-        variants={variantsLeft}
+        variants={variants}
         transition={{ type: "easeInOut", duration: 0.5 }}
       >
         {children}

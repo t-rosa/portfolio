@@ -15,10 +15,10 @@ function Arrow({ direction, href }: Props) {
   if (direction === "down") {
     return (
       <Link href={`/${href}`}>
-        <a className="absolute bottom-0">
+        <a className="col-[1/5] row-[4/5] grid place-items-center relative">
           <ChevronDownIcon
             strokeWidth={0.3}
-            className="w-20 sm:w-24 md:w-32 lg:w-36 xl:w-40 h-20 sm:h-24 md:h-32 lg:h-36 xl:h-40 hover:scale-125 hover:text-indigo-500 duration-300"
+            className="h-full duration-300 hover:text-indigo-500 hover:scale-125"
           />
         </a>
       </Link>
@@ -28,10 +28,10 @@ function Arrow({ direction, href }: Props) {
   if (direction === "left") {
     return (
       <Link href={`/${href}`}>
-        <a className="absolute left-0">
+        <a className="col-[1/2] row-[1/5] grid place-items-center relative">
           <ChevronLeftIcon
             strokeWidth={0.3}
-            className="w-20 sm:w-24 md:w-32 lg:w-36 xl:w-40 h-20 sm:h-24 md:h-32 lg:h-36 xl:h-40 hover:scale-125 hover:text-indigo-500 duration-300"
+            className=" duration-300 hover:text-indigo-500 hover:scale-125"
           />
         </a>
       </Link>
@@ -41,10 +41,10 @@ function Arrow({ direction, href }: Props) {
   if (direction === "right") {
     return (
       <Link href={`/${href}`}>
-        <a className="absolute right-0">
+        <a className="col-[4/5] row-[1/5] grid place-items-center relative">
           <ChevronRightIcon
             strokeWidth={0.3}
-            className="w-20 sm:w-24 md:w-32 lg:w-36 xl:w-40 h-20 sm:h-24 md:h-32 lg:h-36 xl:h-40 hover:scale-125 hover:text-indigo-500 duration-300"
+            className="duration-300 hover:text-indigo-500 hover:scale-125"
           />
         </a>
       </Link>
@@ -53,10 +53,10 @@ function Arrow({ direction, href }: Props) {
 
   return (
     <Link href={`/${href}`}>
-      <a className="absolute top-0">
+      <a className="col-[1/5] row-[1/2] grid place-items-center relative">
         <ChevronUpIcon
           strokeWidth={0.3}
-          className="w-20 sm:w-24 md:w-32 lg:w-36 xl:w-40 h-20 sm:h-24 md:h-32 lg:h-36 xl:h-40 hover:scale-125 hover:text-indigo-500 duration-300"
+          className="h-full duration-300 hover:text-indigo-500 hover:scale-125"
         />
       </a>
     </Link>

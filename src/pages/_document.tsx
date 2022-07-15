@@ -3,7 +3,7 @@ import { Head, Html, Main, NextScript } from "next/document";
 export default function Document() {
   return (
     <Html
-      className='overflow-x-hidden scroll-smooth bg-[url("/pattern.webp")] text-white'
+      className='overflow-x-hidden scroll-smooth bg-[url("/pattern.webp")] text-white antialiased'
       lang="fr"
     >
       <Head>
