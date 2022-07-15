@@ -4,7 +4,7 @@ import AnimatedBall from "../components/AnimatedBall";
 import Arrow from "../components/Arrow";
 import Layout from "../components/Layout";
 
-const Introduction: NextPage = () => {
+const Skills: NextPage = () => {
   return (
     <Layout direction="right">
       <Head>
@@ -16,11 +16,11 @@ const Introduction: NextPage = () => {
           <AnimatedBall />
           Toma Ros<span className="text-indigo-500">a</span>
         </h1>
-        <Arrow direction="up" href="personal" />
-        <Arrow direction="left" href="projects" />
+        <Arrow direction="down" href="contact" />
+        <Arrow direction="left" href="" />
       </main>
     </Layout>
   );
 };
 
-export default Introduction;
+export default Skills;

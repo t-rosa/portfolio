@@ -8,7 +8,7 @@ import Link from "next/link";
 
 interface Props {
   direction: "up" | "right" | "down" | "left";
-  href: "" | "personal" | "projects" | "skills";
+  href: "" | "contact" | "projects" | "skills";
 }
 
 function Arrow({ direction, href }: Props) {

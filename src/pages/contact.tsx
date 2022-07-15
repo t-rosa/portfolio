@@ -4,11 +4,11 @@ import AnimatedBall from "../components/AnimatedBall";
 import Arrow from "../components/Arrow";
 import Layout from "../components/Layout";
 
-const Introduction: NextPage = () => {
+const Contact: NextPage = () => {
   return (
     <Layout direction="right">
       <Head>
-        <title>Toma Rosa - Personal</title>
+        <title>Toma Rosa - Contact</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="min-w-[320px] min-h-[600px] overflow-hidden h-screen grid place-items-center relative">
@@ -16,11 +16,11 @@ const Introduction: NextPage = () => {
           <AnimatedBall />
           Toma Ros<span className="text-indigo-500">a</span>
         </h1>
-        <Arrow direction="left" href="" />
-        <Arrow direction="down" href="skills" />
+        <Arrow direction="up" href="skills" />
+        <Arrow direction="left" href="projects" />
       </main>
     </Layout>
   );
 };
 
-export default Introduction;
+export default Contact;

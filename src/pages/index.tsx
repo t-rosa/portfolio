@@ -16,7 +16,7 @@ const Introduction: NextPage = () => {
           <AnimatedBall />
           Toma Ros<span className="text-indigo-500">a</span>
         </h1>
-        <Arrow direction="right" href="personal" />
+        <Arrow direction="right" href="skills" />
         <Arrow direction="down" href="projects" />
       </main>
     </Layout>
