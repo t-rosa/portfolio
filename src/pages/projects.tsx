@@ -4,7 +4,7 @@ import AnimatedBall from "../components/AnimatedBall";
 import Arrow from "../components/Arrow";
 import Layout from "../components/Layout";
 import Image from "next/future/image";
-import banner from "../images/banner.png";
+import banner from "../images/banner.webp";
 import Link from "next/link";
 
 const Projects: NextPage = () => {
@@ -38,6 +38,7 @@ const Projects: NextPage = () => {
               <Image
                 src={banner}
                 alt="Banière de la société Jane Do Agency Toulouse"
+                priority
               />
             </a>
           </Link>
