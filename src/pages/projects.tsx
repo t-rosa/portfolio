@@ -39,6 +39,7 @@ const Projects: NextPage = () => {
                 src={banner}
                 alt="Banière de la société Jane Do Agency Toulouse"
                 priority
+                placeholder="blur"
               />
             </a>
           </Link>
