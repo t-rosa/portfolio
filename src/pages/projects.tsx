@@ -8,7 +8,7 @@ const Introduction: NextPage = () => {
   return (
     <Layout direction="left">
       <Head>
-        <title>Toma Rosa - Introduction</title>
+        <title>Toma Rosa - Projects</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="min-w-[320px] min-h-[600px] overflow-hidden h-screen grid place-items-center relative">
@@ -16,8 +16,8 @@ const Introduction: NextPage = () => {
           <AnimatedBall />
           Toma Ros<span className="text-indigo-500">a</span>
         </h1>
-        <Arrow direction="right" href="personal" />
-        <Arrow direction="down" href="projects" />
+        <Arrow direction="up" href="" />
+        <Arrow direction="right" href="skills" />
       </main>
     </Layout>
   );

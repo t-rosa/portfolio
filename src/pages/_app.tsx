@@ -1,8 +1,13 @@
-import "../styles/globals.css";
+import { AnimatePresence } from "framer-motion";
 import type { AppProps } from "next/app";
+import "../styles/globals.css";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+function App({ Component, pageProps }: AppProps) {
+  return (
+    <AnimatePresence exitBeforeEnter initial={false}>
+      <Component {...pageProps} />
+    </AnimatePresence>
+  );
 }
 
-export default MyApp;
+export default App;

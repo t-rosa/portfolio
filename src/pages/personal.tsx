@@ -6,18 +6,18 @@ import Layout from "../components/Layout";
 
 const Introduction: NextPage = () => {
   return (
-    <Layout direction="left">
+    <Layout direction="right">
       <Head>
-        <title>Toma Rosa - Introduction</title>
+        <title>Toma Rosa - Personal</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="min-w-[320px] min-h-[600px] overflow-hidden h-screen grid place-items-center relative">
-        <h1 className="relative p-4 border-b border-r text-2xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-light border-dashed">
+        <h1 className="relative p-4 border-b border-l text-2xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-light border-dashed">
           <AnimatedBall />
           Toma Ros<span className="text-indigo-500">a</span>
         </h1>
-        <Arrow direction="right" href="personal" />
-        <Arrow direction="down" href="projects" />
+        <Arrow direction="left" href="" />
+        <Arrow direction="down" href="skills" />
       </main>
     </Layout>
   );
