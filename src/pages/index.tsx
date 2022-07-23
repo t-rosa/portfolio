@@ -28,7 +28,7 @@ const Introduction: NextPage = () => {
           <div className="flex items-center gap-3">
             <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse" />
             <h2 className="">
-              Compagny:&nbsp;
+              company:&nbsp;
               <Link href="https://www.iread-geospace.io/">
                 <a
                   target="_blank"
