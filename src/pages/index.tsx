@@ -23,7 +23,7 @@ const Introduction: NextPage = () => {
         <section className="col-[1/5] row-[2/3] lg:col-[2/3] lg:row-[2/3] justify-self-center z-10">
           <div className="flex items-center gap-3">
             <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse" />
-            <h2 className="">Status: Intern</h2>
+            <h2 className="">Status: Sandwich course</h2>
           </div>
           <div className="flex items-center gap-3">
             <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse" />
