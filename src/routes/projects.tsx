@@ -37,6 +37,13 @@ function RouteComponent() {
         websiteUrl="https://www.maisondelamascotte.com/"
       />
       <ProjectCard
+        title="Better League Client"
+        tools="Astro, TailwindCSS"
+        description="Ma conception du client de League of legends s'il devait être refait. Principalement du CSS et des animations."
+        githubUrl="https://github.com/t-rosa/better-league-client"
+        websiteUrl="https://better-league-client.vercel.app/"
+      />
+      <ProjectCard
         title="Portfolio"
         tools="React, Typescript, TailwindCSS, TanStack Router"
         description="Site vitrine personnel. Présentation de mes projets, compétences et informations de contact."
