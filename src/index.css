@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-[url(./pattern.jpg)] text-zinc-100 antialiased text-balance;
+  }
+
+  .radial {
+    background: radial-gradient(
+        farthest-corner circle,
+        #4788c57e 0%,
+        #2f18466c 50%,
+        #09090b2f 70%
+      )
+      bottom center / 250% 350%;
+  }
+}
