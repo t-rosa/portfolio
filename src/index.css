@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
 @layer base {
+  html {
+    @apply bg-zinc-900;
+  }
+
   body {
     @apply bg-[url(/pattern.jpg)] text-zinc-100 antialiased text-balance;
   }
