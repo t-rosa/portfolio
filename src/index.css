@@ -2,7 +2,7 @@
 
 @layer base {
   body {
-    @apply bg-[url(./pattern.jpg)] text-zinc-100 antialiased text-balance;
+    @apply bg-[url(/pattern.jpg)] text-zinc-100 antialiased text-balance;
   }
 
   .radial {
