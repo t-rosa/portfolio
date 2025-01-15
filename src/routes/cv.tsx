@@ -24,7 +24,8 @@ function RouteComponent() {
         <div className="grid grid-cols-2 gap-3">
           <CvProjectCard
             status="pro"
-            title="Astradal Designer"
+            company="Astradal"
+            title="Editeur cartographique"
             tools="PostgreSQL, Postgis, ASP Net Core, React, Typescript, TailwindCSS, TanStack Router, OpenLayers"
             description="Application web de gestion de données géographiques. Création, édition et visualisation de cartes publique et privée, je peux vous faire une démonstration sur demande."
             websiteUrl="https://app.astradal.com/"
@@ -38,6 +39,7 @@ function RouteComponent() {
           />
           <CvProjectCard
             status="pro"
+            company="Jane Do"
             title="Jane Do Agency"
             tools="Next.js, React, Typescript, TailwindCSS, Sanity"
             description="Site vitrine promotionnel de l'agence musicale Jane Do Agency. Interface et design sur mesure, gestion de contenu via CMS et prise de contact."
@@ -72,7 +74,7 @@ function RouteComponent() {
 
 function PersonalInfos() {
   return (
-    <div className="border rounded-xl border-zinc-300/75 p-6 space-y-3 w-lg ">
+    <div className="border rounded-xl border-zinc-300/75 p-6 space-y-3 w-lg shadow-sm">
       <img
         src={Avatar}
         className="rounded-full size-25 border border-zinc-300/75"
@@ -122,12 +124,12 @@ function PersonalInfos() {
 
 function About() {
   return (
-    <div className="border rounded-xl border-zinc-300/75 p-6 space-y-3">
+    <div className="border rounded-xl border-zinc-300/75 p-6 space-y-3 shadow-sm">
       <h1 className="text-2xl text-indigo-400">À propos</h1>
       <p className="text-zinc-600">
-        Développeur web, 5 ans d&apos;expériences, maîtrise de TypeScript,
-        React, C#, ASP.NET Core, PostgreSQL, Docker et d&apos;autres, je suis
-        prêt et motivé à contribuer efficacement à vos projets.
+        Développeur web, 5 ans d&apos;expérience, maîtrise de TypeScript, React,
+        C#, ASP.NET Core, PostgreSQL, Docker et d&apos;autres, je suis prêt et
+        motivé à contribuer efficacement à vos projets.
       </p>
     </div>
   );
@@ -140,31 +142,32 @@ interface Props {
   githubUrl?: string;
   websiteUrl?: string;
   status?: "pro" | "perso" | "open-source";
+  company?: string;
 }
 
 function CvProjectCard(props: Props) {
   return (
-    <div className="relative border rounded-xl border-zinc-300/75 p-3 lg:p-6 space-y-3 grid grid-rows-[auto_1fr_auto] gap-3">
+    <div className="relative border rounded-xl border-zinc-300/75 p-6 grid grid-rows-[auto_1fr_auto] gap-3 shadow-sm">
       {props.status === "pro" && (
-        <p className="absolute z-10 -top-2 right-7 border px-3 rounded-xl bg-zinc-100 border-zinc-300/75 text-zinc-600 text-xs">
-          pro
+        <p className="absolute z-10 -top-2 right-7 border px-3 rounded-xl bg-emerald-100 border-zinc-300/75 text-zinc-600 text-xs">
+          Pro - {props.company}
         </p>
       )}
       {props.status === "perso" && (
-        <p className="absolute z-10 -top-2 right-7 border px-3 rounded-xl bg-zinc-100 border-zinc-300/75 text-zinc-600 text-xs">
-          perso
+        <p className="absolute z-10 -top-2 right-7 border px-3 rounded-xl bg-red-100 border-zinc-300/75 text-zinc-600 text-xs">
+          Perso
         </p>
       )}
       {props.status === "open-source" && (
-        <p className="absolute z-10 -top-2 right-7 border px-3 rounded-xl bg-zinc-100 border-zinc-300/75 text-zinc-600 text-xs">
-          open source
+        <p className="absolute z-10 -top-2 right-7 border px-3 rounded-xl bg-yellow-100 border-zinc-300/75 text-zinc-600 text-xs">
+          Open Source
         </p>
       )}
       <div className="space-y-1">
         <h2 className="text-xl font-semibold">{props.title}</h2>
-        <p className="text-zinc-400">{props.tools}</p>
+        <p className="text-zinc-500 font-semibold text-sm">{props.tools}</p>
       </div>
-      <p className="text-zinc-600">{props.description}</p>
+      <p className="text-zinc-600 ">{props.description}</p>
       <ul className="flex items-center gap-3">
         {props.githubUrl && (
           <li>
@@ -199,7 +202,7 @@ function CvProjectCard(props: Props) {
 
 function Formations() {
   return (
-    <div className="border rounded-xl border-zinc-300/75 p-6 space-y-3">
+    <div className="border rounded-xl border-zinc-300/75 p-6 space-y-3 shadow-sm">
       <h1 className="text-2xl text-indigo-400">Formations</h1>
       <ul className="list-disc pl-6">
         <li>
