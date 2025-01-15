@@ -13,15 +13,15 @@ export const Route = createFileRoute("/cv")({
 function RouteComponent() {
   return (
     <div className="absolute inset-0 z-10 bg-white text-zinc-900">
-      <div className="mx-auto w-[827px] space-y-3">
-        <div className="flex gap-3">
+      <div className="mx-auto w-[827px] space-y-[37px]">
+        <div className="flex gap-[37px]">
           <PersonalInfos />
-          <div className="grid gap-3">
+          <div className="grid gap-[37px]">
             <About />
             <Formations />
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-[37px]">
           <CvProjectCard
             status="pro"
             company="Astradal"
@@ -50,7 +50,7 @@ function RouteComponent() {
             title="Ark Stack UI"
             tools="React, Typescript, TailwindCSS, Ark-ui"
             description="Implémentation d'une librairie de composants UI autour des composants de la librairie Ark-ui avec React, TypeScript et TailwindCSS."
-            githubUrl="https=//github.com/t-rosa/ark-stack-ui"
+            githubUrl="https://github.com/t-rosa/ark-stack-ui"
           />
           <CvProjectCard
             status="perso"
@@ -147,19 +147,22 @@ interface Props {
 
 function CvProjectCard(props: Props) {
   return (
-    <div className="relative border rounded-xl border-zinc-300/75 p-6 grid grid-rows-[auto_1fr_auto] gap-3 shadow-sm">
+    <div
+      data-status={props.status}
+      className="border-zinc-300/75 relative border rounded-xl  p-6 grid grid-rows-[auto_1fr_auto] gap-3 shadow-sm"
+    >
       {props.status === "pro" && (
-        <p className="absolute z-10 -top-2 right-7 border px-3 rounded-xl bg-emerald-100 border-zinc-300/75 text-zinc-600 text-xs">
+        <p className="absolute z-10 -top-2 right-7 border px-3 rounded-xl bg-white border-emerald-300 text-zinc-600 text-xs">
           Pro - {props.company}
         </p>
       )}
       {props.status === "perso" && (
-        <p className="absolute z-10 -top-2 right-7 border px-3 rounded-xl bg-red-100 border-zinc-300/75 text-zinc-600 text-xs">
+        <p className="absolute z-10 -top-2 right-7 border px-3 rounded-xl bg-white border-red-300 text-zinc-600 text-xs">
           Perso
         </p>
       )}
       {props.status === "open-source" && (
-        <p className="absolute z-10 -top-2 right-7 border px-3 rounded-xl bg-yellow-100 border-zinc-300/75 text-zinc-600 text-xs">
+        <p className="absolute z-10 -top-2 right-7 border px-3 rounded-xl bg-white border-yellow-300 text-zinc-600 text-xs">
           Open Source
         </p>
       )}
@@ -206,35 +209,43 @@ function Formations() {
       <h1 className="text-2xl text-indigo-400">Formations</h1>
       <ul className="list-disc pl-6">
         <li>
+          <div className="inline">2023 -&nbsp;</div>
+          <div className="inline">Ynov Toulouse -&nbsp;</div>
           <a
             href="https://www.francecompetences.fr/recherche/rncp/35078/"
             className="text-indigo-500 underline"
           >
-            M2 - Expert Développement Web - Ynov Toulouse
+            M2 - Expert Développement Web
           </a>
         </li>
         <li>
+          <div className="inline">2021 -&nbsp;</div>
+          <div className="inline">IPI Toulouse -&nbsp;</div>
           <a
             href="https://www.francecompetences.fr/recherche/rncp/30714/"
             className="text-indigo-500 underline"
           >
-            Bachelore CDAN - IPI Toulouse
+            Bachelore CDAN
           </a>
         </li>
         <li>
+          <div className="inline">2018 -&nbsp;</div>
+          <div className="inline">IFC Avignon -&nbsp;</div>
           <a
             href="https://www.francecompetences.fr/recherche/rncp/27812/"
             className="text-indigo-500 underline"
           >
-            Bachelore CSIA - IFC Avignon
+            Bachelore CSIA
           </a>
         </li>
         <li>
+          <div className="inline">2017 -&nbsp;</div>
+          <div className="inline">Lycée Aubanel Avignon -&nbsp;</div>
           <a
             href="https://www.francecompetences.fr/recherche/rncp/35340/"
             className="text-indigo-500 underline"
           >
-            BTS SIO - Lycée Aubanel Avignon
+            BTS SIO
           </a>
         </li>
       </ul>
