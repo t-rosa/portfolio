@@ -1,9 +1,7 @@
-import Avatar from "@/assets/avatar.jpg";
-import { GithubIcon } from "@/assets/icons/github-icon";
-import LinkIcon from "@/assets/icons/link-icons";
-import LinkedinIcon from "@/assets/icons/linkedin-icon";
-import MailIcon from "@/assets/icons/mail-icon";
-import PhoneIcon from "@/assets/icons/phone-icon";
+import { CvAboutCard } from "@/domains/cv/cv-about-card";
+import { CvFormationsCard } from "@/domains/cv/cv-formations-card";
+import { CvPersonalCard } from "@/domains/cv/cv-personal-card";
+import { CvProjectCard } from "@/domains/cv/cv-project-card";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/cv")({
@@ -15,10 +13,10 @@ function RouteComponent() {
     <div className="absolute inset-0 z-10 bg-white text-zinc-900">
       <div className="mx-auto w-[827px] space-y-[37px]">
         <div className="flex gap-[37px]">
-          <PersonalInfos />
+          <CvPersonalCard />
           <div className="grid gap-[37px]">
-            <About />
-            <Formations />
+            <CvAboutCard />
+            <CvFormationsCard />
           </div>
         </div>
         <div className="grid grid-cols-2 gap-[37px]">
@@ -68,187 +66,6 @@ function RouteComponent() {
           />
         </div>
       </div>
-    </div>
-  );
-}
-
-function PersonalInfos() {
-  return (
-    <div className="border rounded-xl border-zinc-300/75 p-6 space-y-3 w-lg shadow-sm">
-      <img
-        src={Avatar}
-        className="rounded-full size-25 border border-zinc-300/75"
-      />
-      <h1 className="text-2xl font-semibold text-indigo-400">Toma ROSA</h1>
-      <div className="space-y-1">
-        <p className="text-zinc-600 text-lg">
-          Ingénieur logiciel, spécialisé dans le web.
-        </p>
-      </div>
-      <ul className="text-zinc-500 text-sm space-y-1">
-        <li>
-          <a href="https://t-rosa.com" className="flex items-center gap-1">
-            <LinkIcon className="size-4" /> t-rosa.com
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/t-rosa"
-            className="flex items-center gap-1"
-          >
-            <GithubIcon className="size-4" /> github.com/t-rosa
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://wwww.linkedin.com/in/toma-rosa/"
-            className="flex items-center gap-1"
-          >
-            <LinkedinIcon className="size-4" /> linkedin.com/in/toma-rosa/
-          </a>
-        </li>
-        <li>
-          <a href="mailto:toma.rosa@ik.me" className="flex items-center gap-1">
-            <MailIcon className="size-4" /> toma.rosa@ik.me
-          </a>
-        </li>
-        <li className="flex items-center gap-1">
-          <a href="tel:0641770136" className="flex items-center gap-1">
-            <PhoneIcon className="size-4" /> 06 41 77 01 36
-          </a>
-        </li>
-      </ul>
-    </div>
-  );
-}
-
-function About() {
-  return (
-    <div className="border rounded-xl border-zinc-300/75 p-6 space-y-3 shadow-sm">
-      <h1 className="text-2xl text-indigo-400">À propos</h1>
-      <p className="text-zinc-600">
-        Développeur web, 5 ans d&apos;expérience, maîtrise de TypeScript, React,
-        C#, ASP.NET Core, PostgreSQL, Docker et d&apos;autres, je suis prêt et
-        motivé à contribuer efficacement à vos projets.
-      </p>
-    </div>
-  );
-}
-
-interface Props {
-  title: string;
-  tools: string;
-  description: string;
-  githubUrl?: string;
-  websiteUrl?: string;
-  status?: "pro" | "perso" | "open-source";
-  company?: string;
-}
-
-function CvProjectCard(props: Props) {
-  return (
-    <div
-      data-status={props.status}
-      className="border-zinc-300/75 relative border rounded-xl p-6 grid grid-rows-[auto_1fr_auto] gap-3 shadow-sm"
-    >
-      {props.status === "pro" && (
-        <p className="absolute z-10 -top-2 right-5 border px-3 rounded-xl bg-white border-emerald-300 text-zinc-600 text-xs">
-          Pro - {props.company}
-        </p>
-      )}
-      {props.status === "perso" && (
-        <p className="absolute z-10 -top-2 right-5 border px-3 rounded-xl bg-white border-red-300 text-zinc-600 text-xs">
-          Perso
-        </p>
-      )}
-      {props.status === "open-source" && (
-        <p className="absolute z-10 -top-2 right-5 border px-3 rounded-xl bg-white border-yellow-300 text-zinc-600 text-xs">
-          Open Source
-        </p>
-      )}
-      <div className="space-y-1">
-        <h2 className="text-xl font-semibold">{props.title}</h2>
-        <p className="text-zinc-500 font-semibold text-sm">{props.tools}</p>
-      </div>
-      <p className="text-zinc-600 ">{props.description}</p>
-      <ul className="flex items-center gap-3">
-        {props.githubUrl && (
-          <li>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href={props.githubUrl}
-              className="flex gap-1 items-center text-sm text-indigo-600/75 "
-            >
-              <GithubIcon className="size-4" />
-              {props.githubUrl}
-            </a>
-          </li>
-        )}
-        {props.websiteUrl && (
-          <li>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href={props.websiteUrl}
-              className="flex gap-1 items-center text-sm text-indigo-600/75 "
-            >
-              <LinkIcon className="size-4" />
-              {props.websiteUrl}
-            </a>
-          </li>
-        )}
-      </ul>
-    </div>
-  );
-}
-
-function Formations() {
-  return (
-    <div className="border rounded-xl border-zinc-300/75 p-6 space-y-3 shadow-sm">
-      <h1 className="text-2xl text-indigo-400">Formations</h1>
-      <ul className="list-disc pl-6">
-        <li>
-          <div className="inline">2023 -&nbsp;</div>
-          <div className="inline">Ynov Toulouse -&nbsp;</div>
-          <a
-            href="https://www.francecompetences.fr/recherche/rncp/35078/"
-            className="text-indigo-500 underline"
-          >
-            M2 - Expert Développement Web
-          </a>
-        </li>
-        <li>
-          <div className="inline">2021 -&nbsp;</div>
-          <div className="inline">IPI Toulouse -&nbsp;</div>
-          <a
-            href="https://www.francecompetences.fr/recherche/rncp/30714/"
-            className="text-indigo-500 underline"
-          >
-            Bachelore CDAN
-          </a>
-        </li>
-        <li>
-          <div className="inline">2018 -&nbsp;</div>
-          <div className="inline">IFC Avignon -&nbsp;</div>
-          <a
-            href="https://www.francecompetences.fr/recherche/rncp/27812/"
-            className="text-indigo-500 underline"
-          >
-            Bachelore CSIA
-          </a>
-        </li>
-        <li>
-          <div className="inline">2017 -&nbsp;</div>
-          <div className="inline">Lycée Aubanel Avignon -&nbsp;</div>
-          <a
-            href="https://www.francecompetences.fr/recherche/rncp/35340/"
-            className="text-indigo-500 underline"
-          >
-            BTS SIO
-          </a>
-        </li>
-      </ul>
     </div>
   );
 }
