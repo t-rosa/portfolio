@@ -22,7 +22,7 @@ export function PersonalCard() {
         </p>
       </div>
       <ul className="flex items-center gap-3">
-        <li>
+        <li className="duration-200 hover:scale-115">
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -32,7 +32,7 @@ export function PersonalCard() {
             <GithubIcon className="size-10" />
           </a>
         </li>
-        <li>
+        <li className="duration-200 hover:scale-115">
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -42,7 +42,7 @@ export function PersonalCard() {
             <LinkedinIcon className="size-10" />
           </a>
         </li>
-        <li>
+        <li className="duration-200 hover:scale-115">
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -52,7 +52,7 @@ export function PersonalCard() {
             <BlueskyIcon className="size-10" />
           </a>
         </li>
-        <li>
+        <li className="duration-200 hover:scale-115">
           <a
             rel="noopener noreferrer"
             href="mailto:toma.rosa@ik.me"
