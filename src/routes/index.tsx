@@ -24,7 +24,7 @@ function RouteComponent() {
       </p>
       <p className="text-zinc-400">
         Pendant mon temps libre, j&apos;aime implémenter des jeux avec Raylib,
-        contribuer à des projets open source et essayer de nouvelles choses.
+        contribuer à des projets open source et lancer des projets.
       </p>
       <p className="text-zinc-400">
         En dehors de la programmation, j&apos;aime jouer à Street Fighter, aux

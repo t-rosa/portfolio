@@ -11,15 +11,14 @@ export function PersonalCard() {
         src={Avatar}
         className="rounded-full size-25 border border-zinc-700/75"
       />
-      <h1 className="text-2xl text-indigo-200">
-        Hey, I'm <span className="font-semibold">Toma</span>.
-      </h1>
+      <h1 className="text-2xl text-indigo-200 font-semibold">Toma ROSA</h1>
       <div className="space-y-1">
         <p className="text-zinc-300 text-lg">
           Ingénieur logiciel, spécialisé dans le web.
         </p>
-        <p className="text-zinc-400">
-          Si vous avez des questions, n&apos;hésitez pas à me contacter.
+        <p className="text-zinc-400 max-w-xs">
+          Si vous avez des questions, n&apos;hésitez pas à me contacter via mes
+          réseaux.
         </p>
       </div>
       <ul className="flex items-center gap-3">
