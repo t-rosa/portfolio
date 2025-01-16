@@ -1,4 +1,4 @@
-import { ProjectCard } from "@/components/project-card";
+import { ProjectCard } from "@/domains/projects/project-card";
 import { projects } from "@/lib/projects";
 import { createFileRoute } from "@tanstack/react-router";
 
