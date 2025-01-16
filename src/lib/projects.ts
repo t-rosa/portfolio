@@ -6,6 +6,7 @@ export interface Project {
   websiteUrl?: string;
   status?: "pro" | "perso" | "open-source";
   company?: string;
+  wip?: boolean;
 }
 
 export const projects: Project[] = [
@@ -18,6 +19,7 @@ export const projects: Project[] = [
     websiteUrl: "https://app.astradal.com/",
     status: "pro",
     company: "Astradal",
+    wip: true,
   },
   {
     title: "Geostack",
@@ -28,6 +30,7 @@ export const projects: Project[] = [
     websiteUrl: "https://www-janedoagency-com.vercel.app/",
     githubUrl: "https://github.com/t-rosa/www.janedoagency.com",
     status: "perso",
+    wip: true,
   },
   {
     title: "Tanstack Form",
@@ -46,6 +49,7 @@ export const projects: Project[] = [
       "Implémentation d'une librairie de composants UI autour des composants de la librairie Ark-ui avec React, TypeScript et TailwindCSS.",
     githubUrl: "https://github.com/t-rosa/ark-stack-ui",
     status: "perso",
+    wip: true,
   },
   {
     title: "Portfolio",
@@ -63,6 +67,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/t-rosa/better-league-client",
     websiteUrl: "https://better-league-client.vercel.app/",
     status: "perso",
+    wip: true,
   },
   {
     title: "Maison de la mascotte",
@@ -80,6 +85,7 @@ export const projects: Project[] = [
       "Implémentation du jeu de plateau Abalone en C++ avec la librairie Raylib.",
     githubUrl: "https://github.com/t-rosa/ABALONE",
     status: "perso",
+    wip: true,
   },
   {
     title: "Tetris",
@@ -88,5 +94,6 @@ export const projects: Project[] = [
       "Implémentation du jeu Tetris en C++ avec la librairie Raylib.",
     githubUrl: "https://github.com/t-rosa/TETRIS",
     status: "perso",
+    wip: true,
   },
 ];
