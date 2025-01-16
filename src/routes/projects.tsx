@@ -10,15 +10,7 @@ function RouteComponent() {
   return (
     <div className="grid md:grid-cols-2 gap-6">
       {projects.map((project) => (
-        <ProjectCard
-          key={project.title}
-          wip={project.wip}
-          title={project.title}
-          tools={project.tools}
-          description={project.description}
-          websiteUrl={project.websiteUrl}
-          githubUrl={project.githubUrl}
-        />
+        <ProjectCard key={project.title} project={project} />
       ))}
     </div>
   );
