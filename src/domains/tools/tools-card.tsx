@@ -104,7 +104,7 @@ export function ToolsCard() {
               <p className="text-zinc-400">TanStack Form</p>
             </li>
             <li>
-              <p className="text-zinc-400">Go / Rust / C++</p>
+              <p className="text-zinc-400">Go / Rust / C++ / Java</p>
             </li>
             <li>
               <p className="text-zinc-400">Raylib</p>
