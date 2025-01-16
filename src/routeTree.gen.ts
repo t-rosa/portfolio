@@ -11,11 +11,18 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as ToolsImport } from './routes/tools'
 import { Route as ProjectsImport } from './routes/projects'
 import { Route as CvImport } from './routes/cv'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
+
+const ToolsRoute = ToolsImport.update({
+  id: '/tools',
+  path: '/tools',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const ProjectsRoute = ProjectsImport.update({
   id: '/projects',
@@ -60,6 +67,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsImport
       parentRoute: typeof rootRoute
     }
+    '/tools': {
+      id: '/tools'
+      path: '/tools'
+      fullPath: '/tools'
+      preLoaderRoute: typeof ToolsImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -69,12 +83,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/cv': typeof CvRoute
   '/projects': typeof ProjectsRoute
+  '/tools': typeof ToolsRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/cv': typeof CvRoute
   '/projects': typeof ProjectsRoute
+  '/tools': typeof ToolsRoute
 }
 
 export interface FileRoutesById {
@@ -82,14 +98,15 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/cv': typeof CvRoute
   '/projects': typeof ProjectsRoute
+  '/tools': typeof ToolsRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/cv' | '/projects'
+  fullPaths: '/' | '/cv' | '/projects' | '/tools'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/cv' | '/projects'
-  id: '__root__' | '/' | '/cv' | '/projects'
+  to: '/' | '/cv' | '/projects' | '/tools'
+  id: '__root__' | '/' | '/cv' | '/projects' | '/tools'
   fileRoutesById: FileRoutesById
 }
 
@@ -97,12 +114,14 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CvRoute: typeof CvRoute
   ProjectsRoute: typeof ProjectsRoute
+  ToolsRoute: typeof ToolsRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CvRoute: CvRoute,
   ProjectsRoute: ProjectsRoute,
+  ToolsRoute: ToolsRoute,
 }
 
 export const routeTree = rootRoute
@@ -117,7 +136,8 @@ export const routeTree = rootRoute
       "children": [
         "/",
         "/cv",
-        "/projects"
+        "/projects",
+        "/tools"
       ]
     },
     "/": {
@@ -128,6 +148,9 @@ export const routeTree = rootRoute
     },
     "/projects": {
       "filePath": "projects.tsx"
+    },
+    "/tools": {
+      "filePath": "tools.tsx"
     }
   }
 }

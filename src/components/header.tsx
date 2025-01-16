@@ -8,10 +8,12 @@ export function Header() {
         {menu.map((item) => (
           <li key={item.title}>
             <Link
+              title={item.title}
               to={item.url}
-              className="block border-zinc-700/75 border rounded-full px-4 py-1.5 bg-zinc-900/55 hover:bg-zinc-800/75 duration-300 transition-colors"
+              className="flex gap-1 items-center border-zinc-700/75 border rounded-full px-4 py-1.5 bg-zinc-900/55 hover:bg-zinc-800/75 duration-300 transition-colors"
             >
-              {item.title}
+              <span>{item.icon}</span>
+              <span className="hidden sm:block">{item.title}</span>
             </Link>
           </li>
         ))}
