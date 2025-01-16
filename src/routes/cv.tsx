@@ -31,19 +31,19 @@ function RouteComponent() {
             websiteUrl="https://app.astradal.com/"
           />
           <CvProjectCard
-            status="open-source"
-            title="Tanstack Form"
-            tools="Typescript"
-            description="Contribution open source à la librairie TanStack Form. Ajout de plusieurs fonctionnalités concernant la validation, la gestion des champs de type 'array', etc."
-            websiteUrl="https://tanstack.com/form/latest"
-          />
-          <CvProjectCard
             status="pro"
             company="Jane Do"
             title="Jane Do Agency"
             tools="Next.js, React, Typescript, TailwindCSS, Sanity"
             description="Site vitrine promotionnel de l'agence musicale Jane Do Agency. Interface et design sur mesure, gestion de contenu via CMS et prise de contact."
             websiteUrl="https://www-janedoagency-com.vercel.app/"
+          />
+          <CvProjectCard
+            status="open-source"
+            title="Tanstack Form"
+            tools="Typescript"
+            description="Contribution open source à la librairie TanStack Form. Ajout de plusieurs fonctionnalités concernant la validation, la gestion des champs de type 'array', etc."
+            websiteUrl="https://tanstack.com/form/latest"
           />
           <CvProjectCard
             status="perso"
