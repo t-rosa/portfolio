@@ -1,7 +1,7 @@
 import { menu } from "@/lib/menu";
 import { Link } from "@tanstack/react-router";
 
-export function Header() {
+export function MenuHeader() {
   return (
     <header>
       <ul className="flex items-center gap-2">
