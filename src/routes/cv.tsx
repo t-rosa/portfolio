@@ -149,20 +149,20 @@ function CvProjectCard(props: Props) {
   return (
     <div
       data-status={props.status}
-      className="border-zinc-300/75 relative border rounded-xl  p-6 grid grid-rows-[auto_1fr_auto] gap-3 shadow-sm"
+      className="border-zinc-300/75 relative border rounded-xl p-6 grid grid-rows-[auto_1fr_auto] gap-3 shadow-sm"
     >
       {props.status === "pro" && (
-        <p className="absolute z-10 -top-2 right-7 border px-3 rounded-xl bg-white border-emerald-300 text-zinc-600 text-xs">
+        <p className="absolute z-10 -top-2 right-5 border px-3 rounded-xl bg-white border-emerald-300 text-zinc-600 text-xs">
           Pro - {props.company}
         </p>
       )}
       {props.status === "perso" && (
-        <p className="absolute z-10 -top-2 right-7 border px-3 rounded-xl bg-white border-red-300 text-zinc-600 text-xs">
+        <p className="absolute z-10 -top-2 right-5 border px-3 rounded-xl bg-white border-red-300 text-zinc-600 text-xs">
           Perso
         </p>
       )}
       {props.status === "open-source" && (
-        <p className="absolute z-10 -top-2 right-7 border px-3 rounded-xl bg-white border-yellow-300 text-zinc-600 text-xs">
+        <p className="absolute z-10 -top-2 right-5 border px-3 rounded-xl bg-white border-yellow-300 text-zinc-600 text-xs">
           Open Source
         </p>
       )}
