@@ -10,17 +10,17 @@ export function ProjectCard({ project }: Props) {
   return (
     <div className="relative border rounded-xl border-zinc-700/75 bg-zinc-900/55 p-3 lg:p-6 space-y-3 grid grid-rows-[auto_1fr_auto] gap-3">
       {project.status === "pro" && (
-        <p className="absolute z-10 -top-2 right-10 border px-3 rounded-xl bg-red-400/75 border-zinc-700/75 text-zinc-100 text-xs">
+        <p className="absolute z-10 -top-2 right-5 border px-3 rounded-xl bg-red-400/75 border-zinc-700/75 text-zinc-100 text-xs">
           Pro {project.company && <span>- {project.company}</span>}
         </p>
       )}
       {project.status === "perso" && (
-        <p className="absolute z-10 -top-2 right-10 border px-3 rounded-xl bg-indigo-500/75 border-zinc-700/75 text-zinc-100 text-xs">
+        <p className="absolute z-10 -top-2 right-5 border px-3 rounded-xl bg-indigo-500/75 border-zinc-700/75 text-zinc-100 text-xs">
           Perso
         </p>
       )}
       {project.status === "open-source" && (
-        <p className="absolute z-10 -top-2 right-10 border px-3 rounded-xl bg-emerald-500/75 border-zinc-700/75 text-zinc-100 text-xs">
+        <p className="absolute z-10 -top-2 right-5 border px-3 rounded-xl bg-emerald-500/75 border-zinc-700/75 text-zinc-100 text-xs">
           Open Source
         </p>
       )}
