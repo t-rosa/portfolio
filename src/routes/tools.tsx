@@ -51,6 +51,9 @@ function RouteComponent() {
           usage="regular"
         />
       )}
+      {tooling.regular.ui.length && (
+        <ToolsCard title="UI" tools={tooling.regular.ui} usage="regular" />
+      )}
       {tooling.occasional.languages.length && (
         <ToolsCard
           title="Langages"
@@ -90,6 +93,13 @@ function RouteComponent() {
         <ToolsCard
           title="Outils"
           tools={tooling.occasional.tools}
+          usage="occasional"
+        />
+      )}
+      {tooling.occasional.ui.length && (
+        <ToolsCard
+          title="UI"
+          tools={tooling.occasional.ui}
           usage="occasional"
         />
       )}
