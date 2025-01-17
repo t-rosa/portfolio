@@ -12,7 +12,7 @@ export const tooling = {
     ui: ["Ark-ui", "Radix-ui", "Headless UI", "React Aria"],
     databases: ["PostgreSQL"],
     tests: ["Vitest", "Playwright", "XUnit", "Testcontainers"],
-    tools: ["Git", "Github", "Docker", "Vim", "VS Code", "Terminal"],
+    tools: ["Vite", "Git", "Github", "Docker", "Vim", "VS Code", "Terminal"],
   },
   occasional: {
     languages: ["Go", "Lua", "Python", "Java", "C++"],
@@ -29,6 +29,6 @@ export const tooling = {
     ui: ["Chakra UI", "ParkUI", "RizzUI", "Justd"],
     databases: ["SQL Server", "MongoDB"],
     tests: ["Jest", "Cypress"],
-    tools: ["NeoVim", "Visual Studio", "Figma"],
+    tools: ["Rolldown", "RSPack", "NeoVim", "Visual Studio", "Figma"],
   },
 };
