@@ -15,8 +15,16 @@ export const tooling = {
   },
   occasional: {
     languages: ["Go", "Lua", "Python", "Java", "C++"],
-    frameworks: ["Angular"],
-    libraries: ["XState", "RxJS", "Redux", "Zustand", "Maplibre", "Mapbox"],
+    frameworks: ["Astro", "Next.js", "Angular", "SolidJS"],
+    libraries: [
+      "XState",
+      "RxJS",
+      "Redux",
+      "Zustand",
+      "Maplibre",
+      "Mapbox",
+      "Sanity",
+    ],
     databases: ["SQL Server", "MongoDB"],
     tests: ["Jest", "Cypress"],
     tools: ["NeoVim", "Visual Studio", "Figma"],
