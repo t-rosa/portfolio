@@ -12,23 +12,23 @@ export function ProjectCard({ project }: Props) {
       {project.wip && (
         <p
           title="Work In Progress"
-          className="absolute z-10 -top-2 left-5 border px-3 rounded-xl bg-zinc-700 border-zinc-700/75 text-zinc-100 text-xs"
+          className="absolute z-10 -top-2 left-5 border px-3 rounded-xl bg-zinc-800 border-zinc-700/75 text-zinc-100 text-xs"
         >
           WIP
         </p>
       )}
       {project.status === "pro" && (
-        <p className="absolute z-10 -top-2 right-5 border px-3 rounded-xl bg-red-400/75 border-zinc-700/75 text-zinc-100 text-xs">
+        <p className="absolute z-10 -top-2 right-5 border px-3 rounded-xl bg-red-800 border-zinc-700/75 text-zinc-100 text-xs">
           Pro {project.company && <span>- {project.company}</span>}
         </p>
       )}
       {project.status === "perso" && (
-        <p className="absolute z-10 -top-2 right-5 border px-3 rounded-xl bg-indigo-500/75 border-zinc-700/75 text-zinc-100 text-xs">
+        <p className="absolute z-10 -top-2 right-5 border px-3 rounded-xl bg-indigo-800 border-zinc-700/75 text-zinc-100 text-xs">
           Perso
         </p>
       )}
       {project.status === "open-source" && (
-        <p className="absolute z-10 -top-2 right-5 border px-3 rounded-xl bg-emerald-500/75 border-zinc-700/75 text-zinc-100 text-xs">
+        <p className="absolute z-10 -top-2 right-5 border px-3 rounded-xl bg-emerald-800 border-zinc-700/75 text-zinc-100 text-xs">
           Open Source
         </p>
       )}
