@@ -103,7 +103,7 @@ export function Squares({
   return (
     <canvas
       ref={canvasRef}
-      className="-z-10 rounded-full mix-blend-lighten absolute min-h-dvh"
+      className="rounded-full absolute -z-10 mix-blend-lighten block size-full "
     />
   );
 }
