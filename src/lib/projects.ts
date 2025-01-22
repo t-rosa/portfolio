@@ -27,6 +27,14 @@ export const projects: Project[] = [
       "PostgreSQL, Postgis, ASP Net Core, React, Typescript, TailwindCSS, TanStack Router, OpenLayers",
     description:
       "Application de gestion de données géographiques, avec divers outils de personnalisation de cartes mais aussi d'objets géographiques et de métiers associés.",
+    status: "perso",
+    wip: true,
+  },
+  {
+    title: "Jane Do Agency",
+    tools: "Next.js, React, TypeScript, TailwindCSS, Sanity",
+    description:
+      "Site vitrine pour l'agence musicale Jane Do Agency. Présentation des services, informations, prise de contact.",
     websiteUrl: "https://www-janedoagency-com.vercel.app/",
     githubUrl: "https://github.com/t-rosa/www.janedoagency.com",
     status: "perso",
