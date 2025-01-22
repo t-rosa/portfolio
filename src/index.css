@@ -6,7 +6,7 @@
   }
 
   body {
-    @apply bg-[url(/pattern.jpg)] text-zinc-100 antialiased text-balance;
+    @apply text-zinc-100 antialiased text-balance;
   }
 
   .radial {
