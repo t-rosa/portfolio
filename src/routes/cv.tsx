@@ -11,22 +11,28 @@ export const Route = createFileRoute("/cv")({
 function RouteComponent() {
   return (
     <div className="absolute inset-0 z-10 bg-white text-zinc-900">
-      <div className="mx-auto w-[827px] space-y-[37px]">
-        <div className="flex gap-[37px]">
+      <div className="mx-auto w-[827px] space-y-[30px]">
+        <div className="flex gap-[30px]">
           <CvPersonalCard />
-          <div className="grid gap-[37px]">
+          <div className="grid gap-[30px]">
             <CvAboutCard />
             <CvFormationsCard />
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-[37px]">
+        <div className="grid grid-cols-2 gap-[30px]">
           <CvProjectCard
             status="pro"
             company="Astradal"
             title="Editeur cartographique"
             tools="PostgreSQL, Postgis, ASP Net Core, React, Typescript, TailwindCSS, TanStack Router, OpenLayers"
-            description="Application web de gestion de données géographiques. Création, édition et visualisation de cartes publique et privée, je peux vous faire une démonstration sur demande."
+            description="Editeur de carte en ligne. Création, édition et visualisation de cartes publique et privée, je peux vous faire une démonstration sur demande."
             websiteUrl="https://app.astradal.com/"
+          />
+          <CvProjectCard
+            status="perso"
+            title="Geostack"
+            tools="PostgreSQL, Postgis, ASP Net Core, React, Typescript, TailwindCSS, TanStack Router, OpenLayers"
+            description="Application de gestion de données géographiques, avec divers outils de personnalisation de cartes mais aussi d'objets géographiques et de métiers associés."
           />
           <CvProjectCard
             status="pro"
@@ -49,13 +55,6 @@ function RouteComponent() {
             tools="React, Typescript, TailwindCSS, Ark-ui"
             description="Implémentation d'une librairie de composants UI autour des composants de la librairie Ark-ui avec React, TypeScript et TailwindCSS."
             githubUrl="https://github.com/t-rosa/ark-stack-ui"
-          />
-          <CvProjectCard
-            status="perso"
-            title="Better League Client"
-            tools="Astro, TailwindCSS"
-            description="Ma conception du client de League of legends s'il devait être refait. Principalement du CSS et des animations."
-            websiteUrl="https://better-league-client.vercel.app/"
           />
           <CvProjectCard
             status="perso"
