@@ -16,7 +16,14 @@ export const tooling = {
   },
   occasional: {
     languages: ["Go", "Lua", "Python", "Java", "C++"],
-    frameworks: ["Astro", "Next.js", "Angular", "SolidJS"],
+    frameworks: [
+      "Astro",
+      "Next.js",
+      "Angular",
+      "SolidJS",
+      "Blazor",
+      "PandaCSS",
+    ],
     libraries: [
       "XState",
       "RxJS",
