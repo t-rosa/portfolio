@@ -16,7 +16,7 @@ export const projects: Project[] = [
       "PostgreSQL, Postgis, ASP Net Core, React, Typescript, TailwindCSS, TanStack Router, OpenLayers",
     description:
       "Editeur de carte en ligne. Création, édition et visualisation de cartes publique et privée, je peux vous faire une démonstration sur demande.",
-    websiteUrl: "https://app.astradal.com/",
+    // websiteUrl: "https://app.astradal.com/",
     status: "pro",
     company: "Astradal",
     wip: true,
@@ -38,7 +38,6 @@ export const projects: Project[] = [
     websiteUrl: "https://www-janedoagency-com.vercel.app/",
     githubUrl: "https://github.com/t-rosa/www.janedoagency.com",
     status: "perso",
-    wip: true,
   },
   {
     title: "Tanstack Form",
